@@ -1,1 +1,21 @@
 Steps to install the DHCP Server.
+
+Step 1 :
+Installation of DHCP Server 
+In Debian system using apt-get command
+Command  : sudo apt-get -y install isc-dhcp-server
+Step 2 :
+Configuration of the DHCP Server
+DHCP configuration file is present at /etc/dhcp/dhcpd.conf
+Open the file with an editor and modify the DHCP File 
+Command : $sudo nano /etc/dhcp/dhcpd.conf
+Step 3:
+Change Ip Address Of dhcpd.conf with your IP address.
+Check the system's ip address using the following command:
+Command : ifconfig
+Change Save And Exit.
+Step 4 :
+Then to start the services use the command
+Command : $sudo systemctl start isc-dhcp-server.service
+And Now enable The Service.
+Command :- $sudo systemctl enable isc-dhcp-server.service
