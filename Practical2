@@ -1,1 +1,22 @@
-
+Add user
+Command : adduser username
+Network settings
+IP Address
+Command : sudo ifconfig -a
+IP address and Netmask Network Configuration
+Command: sudo ifconfig ens33 127.0.0.1 netmask 255.0.0.0
+Configure Services
+Command : service ssh start
+Command : ssh username@hostname
+Basic Command To Run, Enable, Start and Stop Services
+Command : systemctl [command] [service_name]
+To stop and restart the service in Linux, use the command:
+Command : sudo systemctl restart SERVICE_NAME
+Command : sudo systemctl stop SERVICE_NAME
+To Enable Services At Boot
+Command : sudo systemctl enable SERVICE_NAME
+To display the list of services which are running
+Command : sudo systemctl -t=service --state=running
+Sudo settings
+Command :- sudo apt install -y software_name
+sudo is used for all the admin or super user privileges
