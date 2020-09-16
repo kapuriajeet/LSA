@@ -1,0 +1,35 @@
+Steps to install NFS server to share directories on your Network and configure NFS client
+
+Step 1 : To install nfs server
+command : sudo apt-get -y install nfs-kernel-server
+
+Step2 : to enable the nfs server
+command : sudo systemctl enable nfs-kernel-server
+
+Step3 : Now make a directory and cd into that directory and create a text file in that directory and write some text file
+Commands : mkdir demo_dir
+           cd demo_dir
+           touch a.txt
+           nano a.txt
+           
+Step4 : Now edit the contents of /etc/exports using a editor
+Command : sudo nano /etc/exports 
+          and add this line /home/jeet/demo_dir 127.0.0.1(rw)
+
+Step5 : Use the below code it will create a table and keep the 
+records
+Command : sudo exportfs -ra
+
+Step6 : now install nfs-common
+Command : sudo apt-get -y install nfs-common
+
+Step7 : Now make a directory to mount the file (a.txt) from the directory you made earlier
+Command : sudo mkdir jeet_dir
+
+Step8 : now mount the file(a.txt) from demo_dir to jeet_dir
+Command : sudo mount -t nfs 127.0.0.1:/home/jeet/demo_dir /home/jeet/jeet_dir
+
+Step9 : cd into /home/jeet/jeet_dir and check if the file (a.txt) is there or not..
+commands : cd /home/jeet/jeet_dir
+           ls
+           cat a.txt
