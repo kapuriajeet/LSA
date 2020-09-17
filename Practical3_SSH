@@ -1,0 +1,33 @@
+Step 1
+How To Install SSH Server 
+Command : sudo apt-get install openssh-server
+Step 2 
+Start ssh service
+Command : sudo sysytemctl start ssh
+Step 3
+Then test It By Login Into System Using Command
+Command : ssh kali@power9-bmc
+Step 4
+First Update And Then Install OpenSSH server.
+Command : sudo apt update
+Command : sudo apt upgrade
+Step 5
+Install OpenSSH Server
+Command : sudo apt install openssh-server
+Step 6
+Verify And Run SSh Service
+Command : sudo systemctl status ssh
+Step 7 
+Configure Firewall And Open Port 22.
+Command : sudo ufw allow ssh
+Command : sudo ufw enable
+Command : sudo ufw status
+Command : ssh kali@server-ip
+Command : ssh kali@power9
+Command : ssh-copy-id kali@power9
+Step 8 
+To Establish Completed With Own Computer
+Command : ssh 127.0.0.1
+Step 9 
+To Check Which User Is Logged In Right Now
+Command : who
