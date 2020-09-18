@@ -1,0 +1,18 @@
+sudo apt update
+sudo apt install -y wget
+
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
+
+sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+
+ubuntu bionic
+
+ok
+
+sudo apt update
+
+sudo apt install mysql-community-server
+
+sudo systemctl enable --now mysql
+
+sudo mysql -u root -p
