@@ -1,18 +1,20 @@
-sudo apt update
-sudo apt install -y wget
+Step 1 :  sudo apt update
+Step 2 : Install wget
+Command : sudo apt install -y wget
 
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
+Step 3 : wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
 
-sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
+Step 4 : sudo dpkg -i mysql-apt-config_0.8.15-1_all.deb
 
-ubuntu bionic
+Step 5 : Select ubuntu bionic and ok
 
-ok
+Step 6 :  sudo apt update
 
-sudo apt update
+Step 7 : Install mysql 
+Command : sudo apt install mysql-community-server
 
-sudo apt install mysql-community-server
+Step 8 : Enable and check the status of the mysql service
+Command : sudo systemctl enable --now mysql
+          sudo systemctl status --mysql
 
-sudo systemctl enable --now mysql
-
-sudo mysql -u root -p
+Step 9 : sudo mysql -u root -p
