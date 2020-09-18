@@ -1,1 +1,41 @@
+Step 1 : Install samba 
+command : sudo apt-get -y install samba
+
+Step2 : make a directory or a folder that you want to share
+command : mkdir /home/share
+
+Step3 : Open the smb.conf file in an editor
+Command : sudo nano /etc/samba/smb.conf
+
+Step 4 : check the IP address of your virtual machine
+Command : ifconfig
+
+Step 5 : edit the following in smb.conf file at the respective line number
+
+command : unix charset = UTF-8 Line 25
+          uncomment and change IP address you allow Line 51
+          uncomment and add [ map to guest ] = Bad user ]  Line 58
+          
+          #add to the end line
+          [Share]
+          path = /home/share
+          writable = yes
+          guest ok = yes
+          guest only = yes
+          create mode = 0777
+          directory mode = 0777
+          share mode = yes
+          
+Step 6 : start the service 
+Command : sudo systemctl start smbd
+
+Step 7 : check the status of the service
+command : sudo systemctl status smbd
+
+Steo 8 : now go to your windows machine and search for "run"
+
+Step 9 : once the dialog box opens type the IP address of your Linux system (use \\ and then type IP address)
+
+Step 10: after the click OK and it will take you that address and you can see your folder 
+
 
