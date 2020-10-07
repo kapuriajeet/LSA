@@ -1,0 +1,41 @@
+Step1 : First update apt
+Command : sudo apt update -y
+
+Step2 : Install ntp
+Command : sudo apt install sntp
+
+Step3 : Check the ntp version
+Command : sudo sntp --version
+
+Step4 : change directory to /etc to check the if the conf file is there or not
+Command : cd /etc
+
+Step5 : list all the files for ntp
+Command : ls -lrth *ntp.conf*
+
+Step6 : cat the ntp.conf file to see what we have to edit
+Command : cat ntp.conf
+
+Step7 : Check the ntp queries and allow ufw and reload
+Command : ntpq -p
+          sudo ufw allow ntp 
+          sudo ufw reload
+
+Step8 : Start the service of ntp and check the status
+Command : sudo systemctl start ntp
+          sudo systemctl status ntp
+
+Step9 : Change the content of ntp.conf file
+Command : sudo nano /etc/ntp.conf
+(And update the below)
+server localhost
+
+Step10 : Restart the ntp service and check the status again
+Command : sudo systemctl restart ntp
+          sudo systemctl status ntp
+Step 11 : Again Check for the ntp queries
+Command : ntpq -p
+
+
+
+
