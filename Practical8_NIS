@@ -1,2 +1,12 @@
 sudo apt-get install -y nis
 
+sudo nano /etc/default/nis
+
+sudo cp /etc/default/nis /etc/default/nis_client
+
+sudo nano /etc/ypserv.securenets
+
+sudo /usr/lib/yp/ypinit -m
+
+sudo apt-get install make
+
